@@ -1,14 +1,9 @@
 # ANTLR-Tiny
 Códigos ex.:
 
-ex.1
-```
-  read x;
-  x := x+1;
-  write x
-```
+- **1**
 
-ex.2
+![exemplo1](https://github.com/upsdeco/ANTLR-Tiny/assets/135385008/6eb9116a-1e14-4a58-b125-4c0ca48fe49f)
 ```
   { Exemplo de programa
       em TINY -
@@ -24,7 +19,20 @@ ex.2
       write fact; { apresenta o fatorial de x }
   end
 ```
-  ex.3
+---
+- **2**
+
+![exemplo2](https://github.com/upsdeco/ANTLR-Tiny/assets/135385008/a4f857cc-06aa-430f-8720-602c8f51fe70)
+```
+  read x;
+  x := x+1;
+  write x
+```
+---
+- **3**
+
+![exemplo3](https://github.com/upsdeco/ANTLR-Tiny/assets/135385008/a177a79f-38ce-426d-9fc4-0fbec2759d94)
+
 ```
   read u;
   read v; { recebe dois inteiros }
@@ -40,4 +48,8 @@ ex.2
 ```
 
   ---
-  pg. 133 e 134 
+Compiladores: princípios e práticas
+
+Kenneth C. Louden
+
+pg. 133 e 134 
