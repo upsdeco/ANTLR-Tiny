@@ -6,7 +6,6 @@ programa
 
 decl_sequencia
  : decl_sequencia VIRGULA declaracao
- //| decl_sequencia VIRGULA
  | declaracao
  ;
 
