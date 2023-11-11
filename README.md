@@ -6,6 +6,7 @@ ex.1
   write x
 
 ex.2
+```
   { Exemplo de programa
       em TINY -
       fatorial
@@ -19,7 +20,7 @@ ex.2
       until x = 0;
       write fact; { apresenta o fatorial de x }
   end
-
+```
   ex.3
   read u;
   read v; { recebe dois inteiros }
