@@ -5,7 +5,7 @@ programa
  ;
 
 decl_sequencia
- : decl_sequencia VIRGULA declaracao
+ : decl_sequencia PONTO_E_VIRGULA declaracao
  | declaracao
  ;
 
@@ -64,17 +64,19 @@ termo
  ;
 
 mult
- : VEZES
+ : MULTIPLICAR
  | DIVIDIR
  ;
 
 fator
- : PARENTESE_E exp PARENTESE_D
- | NUMERO
+ : PARENTESE_ESQUERDO exp PARENTESE_DIREITO
+ | inteiro
  | IDENTIFICADOR
- ; 
+ ;
 
-/* TOKENS */
+ inteiro
+ : '-'? NUMERO
+ ; 
 
 IF
  : 'if'
@@ -116,7 +118,7 @@ MENOS
  : '-'
  ;
 
-VEZES
+MULTIPLICAR
  : '*'
  ;
 
@@ -132,15 +134,15 @@ MAIOR
  : '<'
  ;
 
-PARENTESE_E
+PARENTESE_ESQUERDO
  : '('
  ;
 
-PARENTESE_D
+PARENTESE_DIREITO
  : ')'
  ;
 
-VIRGULA
+PONTO_E_VIRGULA
  : ';'
  ;
 
@@ -149,7 +151,7 @@ ATRIBUICAO
  ;  
 
 NUMERO
- : ('-')?[0-9]+
+ : [0-9]+
  ;
 
 IDENTIFICADOR
@@ -157,9 +159,9 @@ IDENTIFICADOR
  ;
 
 COMENTARIO
- : '{'.*? '}' -> skip
+ : '{' .*? '}' -> skip
  ;
 
 IGNORAR
-   : [ \r\n\t] -> skip
+   : [ \r\n\t]+ -> skip
    ;
